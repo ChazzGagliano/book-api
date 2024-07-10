@@ -15,7 +15,7 @@ router.post("/add-book", async (req, res) => {
     title: req.body.title,
   });
   if (checkIfBookExists !== null)
-    return res.json({ error: "An account with this email already exists" });
+    return res.json({ error: "A book with this title already exists" });
 
   await bookCollection.insertOne(book);
   return res.status(200).json(book);
