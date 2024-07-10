@@ -1,7 +1,6 @@
 import {Router} from "express"
 import { ObjectId } from "mongodb";
 
-config()
 
 const router = Router()
 router.post("/add-book", async (req, res) => {
@@ -21,7 +20,7 @@ router.post("/add-book", async (req, res) => {
   return res.status(200).json(book);
 });
 
-
+export default router;
 
 // router.get("/books", async (req, res) => {
 //     const bookCollection = await books()
